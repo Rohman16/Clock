@@ -1,0 +1,23 @@
+body {
+    border: 2px solid green;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.clock {
+    border: 20px solid rgb(117, 16, 16);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 0 50% 50% 0;
+    margin: 40px auto;
+}
+
+.hand {
+    margin-top: 40px;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    position: relative;
+    /* top: 0px; */
+    left: 20px;
+}
