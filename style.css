@@ -29,27 +29,30 @@ body {
 
 .second {
     top: 50%;
-    transform-origin: 50% 0%;
-    transform: translateX(-50%);
-    height: 45%;
+    transform-origin: 50% 50px;
+    transform: translate(-50%, -50px);
+    height: 200px;
     width: 4px;
     background-color: var(--second-hand);
 }
 
 .min {
-    transform-origin: 50% 0%;
-    height: 40%;
+    transform-origin: 50% 0;
+    height: 180px;
     width: 10px;
-    background-color: var(--hand);
+    /* background-color: var(--hand); */
+    background-color: rgba(25, 181, 129, 0.5);
     top: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -35px);
+    tra
 }
 
 .hour {
     transform-origin: 50% 0%;
     height: 30%;
     width: 10px;
-    background-color: var(--hand);
+    /* background-color: var(--hand); */
+    background-color: rgba(218, 26, 26, 0.5);
     top: 50%;
     transform: translateX(-50%);
 }
