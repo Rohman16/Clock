@@ -1,88 +1,225 @@
 :root {
-    --border: #05166cff;
-    --second-hand: #ff4000ff;
-    --hand: #565857ff;
-    --mustard: #fcd757ff;
-    --clock-ground: #8ddca4ff;
+  --eleven: rgba(182, 76, 128, 1);
+  --three: rgba(185, 168, 199, 1);
+  --ten: rgba(73, 56, 87, 1);
+  --eight: rgba(169, 53, 37, 1);
+  --six: rgba(107, 66, 65, 1);
+  --seven: rgba(191, 162, 41, 1);
+  --five: rgba(172, 213, 216, 1);
+  --four: rgba(140, 186, 142, 1);
+  --taupe-gray: rgba(140, 136, 141, 1);
+  --inner-line: rgba(13, 31, 34, 1);
 }
 
 body {
-    border: 2px solid green;
-    width: 80%;
-    margin: 40px auto;
-    box-sizing: border-box;
+  border: 2px solid green;
+  width: 80%;
+  margin: 40px auto;
+  box-sizing: border-box;
 }
 
 .clock {
-    border: 0.5rem solid var(--border);
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-    margin: 40px auto;
-    position: relative;
+  border: 0.2rem solid var(--inner-line);
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  margin: 40px auto;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
 }
 
+.outer-clock {
+  /* border: 2px solid blue; */
+  box-shadow: 0 0 5px grey;
+  border-radius: 50%;
+  background-color: aliceblue;
+  /* padding: 0; */
+  width: 25rem;
+  position: relative;
+  height: 25rem;
+  margin: 0 auto;
+  z-index: -1;
+}
 .hand {
-    position: absolute;
-    left: 50%;
+  position: absolute;
+  left: 50%;
 }
 
 .second {
-    top: 50%;
-    transform-origin: 50% 50px;
-    transform: translate(-50%, -50px);
-    height: 200px;
-    width: 4px;
-    background-color: var(--second-hand);
+  top: 50%;
+  transform-origin: 50% 50px;
+  transform: translate(-50%, -50px);
+  height: 200px;
+  width: 4px;
+  background-color: var(--inner-line);
 }
 
 .min {
-    transform-origin: 50% 0;
-    height: 180px;
-    width: 10px;
-    /* background-color: var(--hand); */
-    background-color: rgba(25, 181, 129, 0.5);
-    top: 50%;
-    transform: translate(-50%, -35px);
-    tra
+  transform-origin: 50% 30px;
+  height: 140px;
+  width: 10px;
+  background-color: var(--inner-line);
+  top: 50%;
+  transform: translate(-50%, -30px);
 }
 
 .hour {
-    transform-origin: 50% 0%;
-    height: 30%;
-    width: 10px;
-    /* background-color: var(--hand); */
-    background-color: rgba(218, 26, 26, 0.5);
-    top: 50%;
-    transform: translateX(-50%);
+  transform-origin: 50% 30px;
+  height: 120px;
+  width: 10px;
+  background-color: var(--inner-line);
+  top: 50%;
+  transform: translate(-50%, -30px);
 }
 
 .point {
-    background-color: var(--border);
-    border: 2px solid white;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-}
-
-button {
-    font-size: 2rem;
-    display: inline;
-    margin: 0 auto;
+  background-color: var(--inner-line);
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 #digital {
-    display: block;
-    margin: 0 auto;
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 2rem;
-    border: 2px solid green;
-    background-color: green;
-    width: 160px;
-    border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  border: 2px solid green;
+  background-color: green;
+  width: 160px;
+  border-radius: 5px;
+}
+
+.number {
+  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  /* border: 2px solid blue; */
+  height: 40px;
+  transform-origin: 50% 0%;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding-top: 110px;
+  padding-bottom: 0;
+}
+.cont {
+  position: relative;
+  width: 30px;
+  /* border: 1px solid red; */
+  bottom: 10px;
+}
+
+.satu {
+  transform: translateX(-50%) rotate(210deg);
+}
+
+.one {
+  transform: rotate(150deg);
+}
+
+.dua {
+  transform: translateX(-50%) rotate(240deg);
+}
+
+.two {
+  transform: rotate(120deg);
+}
+
+.tiga {
+  transform: translateX(-50%) rotate(270deg);
+}
+
+.three {
+  transform: rotate(90deg);
+}
+
+.empat {
+  transform: translateX(-50%) rotate(300deg);
+}
+
+.four {
+  transform: rotate(60deg);
+}
+
+.lima {
+  transform: translateX(-50%) rotate(330deg);
+}
+
+.five {
+  transform: rotate(30deg);
+}
+
+.enam {
+  transform: translateX(-50%) rotate(360deg);
+}
+
+.six {
+  transform: rotate(0deg);
+}
+
+.tujuh {
+  transform: translateX(-50%) rotate(30deg);
+}
+
+.seven {
+  transform: rotate(-30deg);
+}
+
+.delapan {
+  transform: translateX(-50%) rotate(60deg);
+}
+
+.eight {
+  transform: rotate(-60deg);
+}
+
+.sembilan {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.nine {
+  transform: rotate(-90deg);
+}
+
+.sepuluh {
+  transform: translateX(-50%) rotate(120deg);
+}
+
+.ten {
+  transform-origin: 70%;
+  transform: rotate(-120deg);
+}
+
+.seBelas {
+  transform: translateX(-50%) rotate(150deg);
+}
+
+.eleven {
+  transform-origin: 65%;
+  transform: rotate(-150deg);
+}
+
+.duaBelas {
+  transform: translateX(-50%) rotate(180deg);
+  /* border: 2px solid blue; */
+  padding-left: 0;
+  padding-right: 0;
+  /* margin: 0 auto; */
+}
+
+.twelve {
+  /* border: 1px solid green; */
+  /* text-align: center; */
+  transform-origin: 80%;
+  /* transform: translateX(100%); */
+  transform: rotate(-180deg);
 }
