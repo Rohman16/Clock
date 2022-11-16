@@ -1,240 +1,246 @@
 :root {
-    --eleven: rgba(182, 76, 128, 1);
-    --three: rgba(185, 168, 199, 1);
-    --ten: rgba(73, 56, 87, 1);
-    --eight: rgba(169, 53, 37, 1);
-    --six: rgba(107, 66, 65, 1);
-    --seven: rgba(191, 162, 41, 1);
-    --five: rgba(172, 213, 216, 1);
-    --four: rgba(140, 186, 142, 1);
-    --taupe-gray: rgba(140, 136, 141, 1);
-    --inner-line: rgba(13, 31, 34, 1);
+  --eleven: rgba(182, 76, 128, 1);
+  --three: rgba(185, 168, 199, 1);
+  --ten: rgba(73, 56, 87, 1);
+  --eight: rgba(169, 53, 37, 1);
+  --six: rgba(107, 66, 65, 1);
+  --seven: rgba(191, 162, 41, 1);
+  --five: rgba(172, 213, 216, 1);
+  --four: rgba(140, 186, 142, 1);
+  --taupe-gray: rgba(140, 136, 141, 1);
+  --inner-line: rgba(13, 31, 34, 1);
 }
 
 body {
-    border: 2px solid green;
-    width: 80%;
-    margin: 40px auto;
-    box-sizing: border-box;
+  border: 2px solid green;
+  width: 80%;
+  margin: 40px auto;
+  box-sizing: border-box;
 }
 
 .clock {
-    border: 2rem solid aliceblue;
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-    margin: 40px auto;
-    position: relative;
-    background-color: transparent;
-    box-shadow: 0px 0px 10px grey;
-    box-shadow: inset 0px 0px 10px grey;
+  border: 2rem solid aliceblue;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  margin: 40px auto;
+  position: relative;
+  background-color: var(--five);
+  box-shadow: 0px 0px 15px rgb(34, 3, 3), inset 0px 0px 10px grey;
 }
 
-
-/* .outer-clock {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
-    border-radius: 50%;
-    border: 0px solid blue;
-    background-color: aliceblue;
-    /* padding: 0; */
-
-
-/* width: 25rem;
-position: relative;
-height: 25rem;
-margin: 0 auto;
-z-index: -1;
-
-} */
-
 .hand {
-    position: absolute;
-    left: 50%;
+  position: absolute;
+  left: 50%;
+  z-index: 2;
 }
 
 .second {
-    top: 50%;
-    transform-origin: 50% 50px;
-    transform: translate(-50%, -50px);
-    height: 200px;
-    width: 4px;
-    background-color: var(--inner-line);
+  top: 50%;
+  transform-origin: 50% 50px;
+  transform: translate(-50%, -50px);
+  height: 200px;
+  width: 4px;
+  background-color: red;
+  /* z-index: 3; */
 }
 
 .min {
-    transform-origin: 50% 35px;
-    height: 180px;
-    width: 10px;
-    background-color: var(--inner-line);
-    top: 50%;
-    transform: translate(-50%, -35px);
+  transform-origin: 50% 35px;
+  height: 180px;
+  width: 10px;
+  background-color: var(--inner-line);
+  top: 50%;
+  transform: translate(-50%, -35px);
 }
 
 .hour {
-    transform-origin: 50% 30px;
-    height: 120px;
-    width: 10px;
-    background-color: var(--inner-line);
-    top: 50%;
-    transform: translate(-50%, -30px);
+  transform-origin: 50% 30px;
+  height: 120px;
+  width: 10px;
+  background-color: var(--inner-line);
+  top: 50%;
+  transform: translate(-50%, -30px);
 }
 
 .point {
-    background-color: var(--inner-line);
-    border: 2px solid white;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+  background-color: var(--inner-line);
+  border: 2px solid aliceblue;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 3;
 }
 
 #digital {
-    display: block;
-    margin: 0 auto;
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 2rem;
-    border: 2px solid green;
-    background-color: green;
-    width: 160px;
-    border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  border: 2px solid var(--six);
+  background-color: var(--six);
+  width: 160px;
+  border-radius: 5px;
+  color: var(--five);
 }
 
 .number {
-    font-size: 4rem;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bolder;
-    /* border: 2px solid blue; */
-    height: 40px;
-    transform-origin: 50% 0%;
-    width: 40px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    padding-top: 110px;
-    padding-bottom: 0;
+  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  /* border: 2px solid blue; */
+  height: 40px;
+  transform-origin: 50% 0%;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding-top: 110px;
+  padding-bottom: 0;
+  z-index: 1;
 }
 
 .cont {
-    position: relative;
-    width: 30px;
-    /* border: 1px solid red; */
-    bottom: 10px;
+  position: relative;
+  width: 30px;
+  /* border: 1px solid red; */
+  bottom: 10px;
 }
 
 .satu {
-    transform: translateX(-50%) rotate(210deg);
+  transform: translateX(-50%) rotate(210deg);
 }
 
 .one {
-    transform: rotate(150deg);
+  transform-origin: 10% 40%;
+  transform: rotate(150deg);
+  color: var(--seven);
+  font-size: 4rem;
 }
 
 .dua {
-    transform: translateX(-50%) rotate(240deg);
+  transform: translateX(-50%) rotate(240deg);
 }
 
 .two {
-    transform: rotate(120deg);
+  transform-origin: 60% 35%;
+  transform: rotate(120deg);
+  color: rgba(213, 141, 122, 1);
+  font-size: 6rem;
 }
 
 .tiga {
-    transform: translateX(-50%) rotate(270deg);
+  transform: translateX(-50%) rotate(270deg);
 }
 
 .three {
-    transform: rotate(90deg);
+  transform-origin: 75% 35%;
+  transform: rotate(90deg);
+  color: var(--three);
+  font-size: 6rem;
 }
 
 .empat {
-    transform: translateX(-50%) rotate(300deg);
+  transform: translateX(-50%) rotate(300deg);
 }
 
 .four {
-    transform: rotate(60deg);
+  transform: rotate(60deg);
+  color: var(--four);
+  font-size: 4rem;
 }
 
 .lima {
-    transform: translateX(-50%) rotate(330deg);
+  transform: translateX(-50%) rotate(330deg);
 }
 
 .five {
-    transform: rotate(30deg);
+  transform-origin: 290% 40%;
+  transform: rotate(30deg);
+  color: var(--ten);
+  font-size: 6rem;
 }
 
 .enam {
-    transform: translateX(-50%) rotate(360deg);
+  transform: translateX(-50%) rotate(360deg);
 }
 
 .six {
-    transform: rotate(0deg);
+  transform-origin: 50% 200%;
+  transform: rotate(0deg);
 }
 
 .tujuh {
-    transform: translateX(-50%) rotate(30deg);
+  transform: translateX(-50%) rotate(30deg);
 }
 
 .seven {
-    transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  color: var(--seven);
+  font-size: 5rem;
 }
 
 .delapan {
-    transform: translateX(-50%) rotate(60deg);
+  transform: translateX(-50%) rotate(60deg);
 }
 
 .eight {
-    transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  color: var(--eight);
+  font-size: 6rem;
 }
 
 .sembilan {
-    transform: translateX(-50%) rotate(90deg);
+  transform: translateX(-50%) rotate(90deg);
 }
 
 .nine {
-    transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .sepuluh {
-    transform: translateX(-50%) rotate(120deg);
+  transform: translateX(-50%) rotate(120deg);
 }
 
 .ten {
-    transform-origin: 70%;
-    transform: rotate(-120deg);
+  transform-origin: 70%;
+  transform: rotate(-120deg);
+  color: var(--ten);
+  font-size: 4.5rem;
 }
 
 .seBelas {
-    transform: translateX(-50%) rotate(150deg);
+  transform: translateX(-50%) rotate(150deg);
 }
 
 .eleven {
-    transform-origin: 65%;
-    transform: rotate(-150deg);
+  transform-origin: 65%;
+  transform: rotate(-150deg);
+  color: var(--eleven);
+  font-size: 4rem;
 }
 
 .duaBelas {
-    transform: translateX(-50%) rotate(180deg);
-    /* border: 2px solid blue; */
-    padding-left: 0;
-    padding-right: 0;
-    /* margin: 0 auto; */
+  transform: translateX(-50%) rotate(180deg);
+  /* border: 2px solid blue; */
+  padding-left: 0;
+  padding-right: 0;
+  /* margin: 0 auto; */
 }
 
 .twelve {
-    /* border: 1px solid green; */
-    /* text-align: center; */
-    transform-origin: 80%;
-    /* transform: translateX(100%); */
-    transform: rotate(-180deg);
+  transform-origin: 80% 32%;
+  transform: rotate(-180deg);
 }
 
-.three,
 .six,
 .nine,
 .twelve {
-    color: var(--three);
-    font-size: 5rem;
+  color: var(--six);
+  font-size: 6rem;
 }
