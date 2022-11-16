@@ -56,12 +56,22 @@ body {
 }
 
 .min {
+<<<<<<< HEAD
   transform-origin: 50% 30px;
   height: 140px;
   width: 10px;
   background-color: var(--inner-line);
   top: 50%;
   transform: translate(-50%, -30px);
+=======
+    transform-origin: 50% 35px;
+    height: 180px;
+    width: 10px;
+    /* background-color: var(--hand); */
+    background-color: rgba(25, 181, 129, 0.5);
+    top: 50%;
+    transform: translate(-50%, -35px);
+>>>>>>> 99f698e (Continue)
 }
 
 .hour {
